@@ -1,0 +1,35 @@
+// Program: Simple Generic Class Example
+class Box<T> {   // 'T' is a type parameter
+    private T value;
+
+    // Constructor
+    public Box(T value) {
+        this.value = value;
+    }
+
+    // Getter method
+    public T getValue() {
+        return value;
+    }
+
+    // Setter method
+    public void setValue(T value) {
+        this.value = value;
+    }
+}
+
+public class GenericClassExample {
+    public static void main(String[] args) {
+        // Create Box objects with different types
+        Box<Integer> intBox = new Box<>(123);
+        Box<String> strBox = new Box<>("Hello Generics");
+
+        // Display values
+        System.out.println("Integer Value: " + intBox.getValue());
+        System.out.println("String Value: " + strBox.getValue());
+    }
+}
+
+#OUTPUT
+Integer Value: 123
+String Value: Hello Generics
