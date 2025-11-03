@@ -1,0 +1,19 @@
+class Box {
+    double w, h, d;
+
+    // Default constructor
+    Box() {
+        System.out.println("This is the constructor");
+        w = 10;
+        h = 10;
+        d = 10;
+        System.out.println("The values of w, h, d are: " + w + ", " + h + ", " + d);
+    }
+
+    public static void main(String[] args) {
+        Box myBox = new Box();  // Constructor will be called automatically
+    }
+}
+#OUTPUT
+This is the constructor
+The values of w, h, d are: 10.0, 10.0, 10.0
