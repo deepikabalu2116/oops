@@ -1,0 +1,37 @@
+// Program: Simple Generic Method Example
+public class GenericMethodExample {
+
+    // Generic method that prints any type of array
+    public static <T> void printArray(T[] array) {
+        for (T element : array) {
+            System.out.print(element + " ");
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        // Arrays of different types
+        Integer[] intArray = {1, 2, 3, 4, 5};
+        String[] strArray = {"Java", "is", "fun"};
+        Double[] dblArray = {1.1, 2.2, 3.3};
+
+        // Calling the same generic method for different data types
+        System.out.println("Integer Array:");
+        printArray(intArray);
+
+        System.out.println("String Array:");
+        printArray(strArray);
+
+        System.out.println("Double Array:");
+        printArray(dblArray);
+    }
+}
+
+
+#OUTPUT
+Integer Array:
+1 2 3 4 5 
+String Array:
+Java is fun 
+Double Array:
+1.1 2.2 3.3 
