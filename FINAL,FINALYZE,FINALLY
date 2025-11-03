@@ -1,0 +1,53 @@
+class A {
+    public static void main(String[] args) {
+        try {
+            int[] my = {1, 2, 3};
+            System.out.println(my[10]); // This will throw ArrayIndexOutOfBoundsException
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Array index is out of bounds");
+        } finally {
+            System.out.println("The try-catch block is finished");
+        }
+    }
+}
+#OUTPUT
+Array index is out of bounds
+The try-catch block is finished
+
+
+#PROGRAM 2
+public class Car {
+    public Car() {
+        System.out.println("Car is created");
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        try {
+            System.out.println("Car is being destroyed");
+        } finally {
+            super.finalize();
+        }
+    }
+
+    public static void main(String[] args) {
+        Car myCar = new Car();
+        myCar = null;
+
+        // Request garbage collection
+        System.gc();
+
+        // Pause to give GC time to run
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("End of main method");
+    }
+}
+#OUTPUT
+Car is created
+Car is being destroyed
+End of main method
