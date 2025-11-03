@@ -1,0 +1,29 @@
+class Student {
+    String name, dept;
+    int regno;
+    char sec;
+
+    void combination() {
+        System.out.println("Name of the student is " + name);
+        System.out.println("Section of the student is " + sec);
+        System.out.println("Department of the student is " + dept);
+        System.out.println("Registration number of the student is " + regno);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student obj = new Student();
+        obj.name = "BALA";
+        obj.dept = "AIDS";
+        obj.regno = 35;
+        obj.sec = 'A';
+
+        obj.combination();
+    }
+}
+#OUTPUT
+ame of the student is BALA
+Section of the student is A
+Department of the student is AIDS
+Registration number of the student is 35
