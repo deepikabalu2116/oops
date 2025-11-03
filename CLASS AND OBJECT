@@ -1,0 +1,17 @@
+class Abc {
+    int regNo;
+    String name;
+
+    // Parameterized constructor
+    Abc(int r, String n) {
+        this.regNo = r;   // 'this' refers to the current object
+        this.name = n;
+        System.out.println(regNo + " " + name);
+    }
+
+    public static void main(String[] args) {
+        Abc obj = new Abc(10, "RIT");
+    }
+}
+#OUTPUT
+10 RIT
