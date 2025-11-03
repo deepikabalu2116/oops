@@ -1,0 +1,36 @@
+// Program: Simple 2-D Array Example
+public class TwoDArrayExample {
+    public static void main(String[] args) {
+        // Declare and initialize a 2-D array
+        int[][] matrix = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        // Display the 2-D array
+        System.out.println("Elements of the 2-D array:");
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println(); // Move to next line
+        }
+
+        // Calculate sum of all elements
+        int sum = 0;
+        for (int[] row : matrix) {
+            for (int num : row) {
+                sum += num;
+            }
+        }
+        System.out.println("Sum of all elements = " + sum);
+    }
+}
+
+#OUTPUT
+Elements of the 2-D array:
+1 2 3 
+4 5 6 
+7 8 9 
+Sum of all elements = 45
